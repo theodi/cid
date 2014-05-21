@@ -7,8 +7,8 @@ describe Cid::Validation do
 
     validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'valid'))
 
-    validation[:errors]["votes/votes-1.csv"].should == []
-    validation[:warnings]["votes/votes-1.csv"].should == []
+    validation["votes/votes-1.csv"][:errors].should == []
+    validation["votes/votes-1.csv"][:warnings].should == []
   end
 
   it "validates a package with multiple files in a single folder" do
@@ -16,10 +16,10 @@ describe Cid::Validation do
 
     validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'multiple_files'))
 
-    validation[:errors]["votes/votes-1.csv"].should == []
-    validation[:warnings]["votes/votes-1.csv"].should == []
-    validation[:errors]["votes/votes-2.csv"].should == []
-    validation[:warnings]["votes/votes-2.csv"].should == []
+    validation["votes/votes-1.csv"][:errors].should == []
+    validation["votes/votes-1.csv"][:warnings].should == []
+    validation["votes/votes-2.csv"][:errors].should == []
+    validation["votes/votes-2.csv"][:warnings].should == []
   end
 
   it "validates a package with multiple files in multiple folders" do
@@ -27,22 +27,22 @@ describe Cid::Validation do
 
     validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'multiple_folders'))
 
-    validation[:errors]["votes/votes-1.csv"].should == []
-    validation[:warnings]["votes/votes-1.csv"].should == []
-    validation[:errors]["votes/votes-2.csv"].should == []
-    validation[:warnings]["votes/votes-2.csv"].should == []
-    validation[:errors]["seats/seats-1.csv"].should == []
-    validation[:warnings]["seats/seats-1.csv"].should == []
-    validation[:errors]["seats/seats-2.csv"].should == []
-    validation[:warnings]["seats/seats-2.csv"].should == []
+    validation["votes/votes-1.csv"][:errors].should == []
+    validation["votes/votes-1.csv"][:warnings].should == []
+    validation["votes/votes-2.csv"][:errors].should == []
+    validation["votes/votes-2.csv"][:warnings].should == []
+    validation["seats/seats-1.csv"][:errors].should == []
+    validation["seats/seats-1.csv"][:warnings].should == []
+    validation["seats/seats-2.csv"][:errors].should == []
+    validation["seats/seats-2.csv"][:warnings].should == []
   end
 
   it "returns errors for an invalid csv" do
     validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'invalid'))
 
-    validation[:warnings]["votes/votes-1.csv"].count.should == 1
-    validation[:warnings]["votes/votes-1.csv"].first.category.should == :schema
-    validation[:warnings]["votes/votes-1.csv"].first.column.should == 2
+    validation["votes/votes-1.csv"][:warnings].count.should == 1
+    validation["votes/votes-1.csv"][:warnings].first.category.should == :schema
+    validation["votes/votes-1.csv"][:warnings].first.column.should == 2
   end
 
 end

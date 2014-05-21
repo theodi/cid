@@ -5,10 +5,7 @@ module Cid
   class Validation
 
     def self.validate(path)
-      result = {
-        errors: {},
-        warnings: {}
-      }
+      result = {}
 
       paths = Dir.glob("#{path}/**")
 
@@ -21,10 +18,11 @@ module Cid
 
         Dir["#{path}/*.csv"].each do |csv|
           validator = Csvlint::Validator.new(File.new(csv), nil, schema)
-          ref =  csv.split("/").last(2).join("/")
+          ref = csv.split("/").last(2).join("/")
+          result[ref] = {}
 
-          result[:errors][ref] = validator.errors
-          result[:warnings][ref] = validator.warnings
+          result[ref][:errors] = validator.errors
+          result[ref][:warnings] = validator.warnings
         end
       end
 
