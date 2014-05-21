@@ -48,4 +48,15 @@ if ARGV[0] == "validate"
 
   exit code
 
+elsif ARGV[0] == "publish"
+
+  if ARGV[1]
+    source = ARGV[1]
+  else
+    source = "."
+  end
+
+  datapackage = Cid::Datapackage.create(source)
+
+  File.open("#{source}/datapackage.json", 'w') { |f| f.write(datapackage) }
 end
