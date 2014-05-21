@@ -13,7 +13,7 @@ module Cid
         begin
           schema = Csvlint::Schema.load_from_json_table(File.new(Dir["#{path}/schema.json"][0]))
         rescue
-          # Error! No schema in place!
+          schema = nil
         end
 
         Dir["#{path}/*.csv"].each do |csv|

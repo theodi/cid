@@ -45,4 +45,13 @@ describe Cid::Validation do
     validation["votes/votes-1.csv"][:warnings].first.column.should == 2
   end
 
+  it "works if there is no schema" do
+    Csvlint::Validator.should_receive(:new).once.and_call_original
+
+    validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'no_schema'))
+
+    validation["votes/votes-1.csv"][:errors].should == []
+    validation["votes/votes-1.csv"][:warnings].should == []
+  end
+
 end
