@@ -7,7 +7,7 @@ describe Cid::Publish, :vcr do
 
   before :each do
     tmpdir = Dir.mktmpdir
-    Git.clone("git@github.com:theodi/cid-test.git", tmpdir)
+    Git.clone("https://github.com/theodi/cid-test.git", tmpdir)
     @remote = Cid::Publish.new(tmpdir, ENV['GITHUB_OAUTH_TOKEN'])
   end
 
