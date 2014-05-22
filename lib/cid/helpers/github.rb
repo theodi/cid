@@ -77,7 +77,7 @@ module Cid::Helpers::Github
 
   def commit(sha)
     parent = latest_commit(default_branch)
-    commit = github.git_data.commits.create user, repo, "message" => "Updated datapackage.json",
+    commit = github.git_data.commits.create user, repo, "message" => "Updated datapackage.json [ci skip]",
               "parents" => [parent],
               "tree" => sha
     commit['sha']
