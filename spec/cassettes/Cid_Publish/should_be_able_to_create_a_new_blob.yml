@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.github.com/repos/theodi/cid-test/git/blobs?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: UTF-8
+      string: ! '{"content":"new blob content","encoding":"utf-8"}'
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 22 May 2014 13:11:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 201 Created
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4917'
+      X-Ratelimit-Reset:
+      - '1400765395'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - ! '"3cb71254860221b3fe02e4d6afd3b069"'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Location:
+      - https://api.github.com/repos/theodi/cid-test/git/blobs/28b552e7359c5c3bbe947749aab70d18e3ea554b
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Length:
+      - '154'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Github-Request-Id:
+      - 4F4C59B3:3039:35881B6:537DF77B
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: US-ASCII
+      string: ! '{"sha":"28b552e7359c5c3bbe947749aab70d18e3ea554b","url":"https://api.github.com/repos/theodi/cid-test/git/blobs/28b552e7359c5c3bbe947749aab70d18e3ea554b"}'
+    http_version: 
+  recorded_at: Thu, 22 May 2014 13:11:28 GMT
+recorded_with: VCR 2.4.0
