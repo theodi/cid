@@ -17,7 +17,7 @@ Before('@validate') do
 end
 
 After('@publish') do
-  `rm -rf tmp/aruba/`
+  #`rm -rf tmp/aruba/`
 end
 
 Spork.each_run do

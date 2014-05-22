@@ -5,24 +5,28 @@ module Cid
 
   class Datapackage
 
-    def self.create(path)
+    attr_accessor :json
 
+    def initialize(path)
+      @path = path
       begin
-        datapackage = JSON.parse(File.new("#{path}/datapackage.json").read)
+        @datapackage = JSON.parse(File.new("#{@path}/datapackage.json").read)
       rescue
         return "No datapackage present!"
       end
+    end
 
+    def create
       # Clear out all the resources
-      datapackage["resources"] = []
+      @datapackage["resources"] = []
 
-      paths = Dir.glob("#{path}/*/")
+      paths = Dir.glob("#{@path}/*/")
 
       paths.each do |path|
         schema = JSON.parse(File.new(Dir["#{path}/schema.json"][0]).read)
 
         Dir["#{path}*.csv"].each do |csv|
-          datapackage["resources"] << {
+          @datapackage["resources"] << {
             name: File.basename(csv, ".csv"),
             path: csv.split("/").last(2).join("/"),
             format: "csv",
@@ -35,7 +39,12 @@ module Cid
         end
       end
 
-      datapackage.to_json
+      @json = @datapackage.to_json
+    end
+
+    def write
+      self.create if @json.nil?
+      File.open("#{@path}/datapackage.json", 'w') { |f| f.write(@json) }
     end
 
   end

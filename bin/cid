@@ -56,7 +56,8 @@ elsif ARGV[0] == "publish"
     source = "."
   end
 
-  datapackage = Cid::Datapackage.create(source)
+  datapackage = Cid::Datapackage.new(source)
+  datapackage.create
+  datapackage.write
 
-  File.open("#{source}/datapackage.json", 'w') { |f| f.write(datapackage) }
 end
