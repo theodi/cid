@@ -20,100 +20,63 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        R2l0SHViLmNvbQ==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VGh1LCAyMiBNYXkgMjAxNCAxMzoxMDozMyBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "WC1SYXRlbGltaXQtTGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "WC1SYXRlbGltaXQtUmVtYWluaW5n":
-      - !binary |-
-        NDkxOA==
-      !binary "WC1SYXRlbGltaXQtUmVzZXQ=":
-      - !binary |-
-        MTQwMDc2NTM5NQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT02MCwgcy1tYXhhZ2U9NjA=
-      !binary "TGFzdC1Nb2RpZmllZA==":
-      - !binary |-
-        VGh1LCAyMiBNYXkgMjAxNCAxMzowNjozNSBHTVQ=
-      !binary "RXRhZw==":
-      - !binary |-
-        IjJiMDJkMDc0MTI4MTA2MTk1Y2ZlZTA0NmUzMjNjYjA5Ig==
-      !binary "WC1PYXV0aC1TY29wZXM=":
-      - !binary |-
-        Z2lzdCwgcmVwbywgdXNlcg==
-      !binary "WC1BY2NlcHRlZC1PYXV0aC1TY29wZXM=":
-      - !binary ""
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBBdXRob3JpemF0aW9uLCBDb29raWUsIFgtR2l0SHViLU9UUA==
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "WC1HaXRodWItTWVkaWEtVHlwZQ==":
-      - !binary |-
-        Z2l0aHViLnYzOyBmb3JtYXQ9anNvbg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        ZGVueQ==
-      !binary "Q29udGVudC1TZWN1cml0eS1Qb2xpY3k=":
-      - !binary |-
-        ZGVmYXVsdC1zcmMgJ25vbmUn
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctQ3JlZGVudGlhbHM=":
-      - !binary |-
-        dHJ1ZQ==
-      !binary "QWNjZXNzLUNvbnRyb2wtRXhwb3NlLUhlYWRlcnM=":
-      - !binary |-
-        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
-        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
-        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
-        SW50ZXJ2YWw=
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2lu":
-      - !binary |-
-        Kg==
-      !binary "WC1HaXRodWItUmVxdWVzdC1JZA==":
-      - !binary |-
-        NEY0QzU5QjM6MEZFOTo0MjBBMUJDOjUzN0RGNzQ4
-      !binary "U3RyaWN0LVRyYW5zcG9ydC1TZWN1cml0eQ==":
-      - !binary |-
-        bWF4LWFnZT0zMTUzNjAwMA==
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1TZXJ2ZWQtQnk=":
-      - !binary |-
-        ODhkOTI0ZWQ4NjE3MzZkMjc0OWNlMWE1NTc2NmNiNTM=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 22 May 2014 14:10:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4983'
+      X-Ratelimit-Reset:
+      - '1400771341'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Thu, 22 May 2014 14:09:56 GMT
+      Etag:
+      - '"47f7c7c0132d67ee74b4feb0e63dedba"'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Github-Request-Id:
+      - 4F4C59B3:3039:36E64DD:537E0560
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - d818ddef80f4c7d10683dd483558952a
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA6WR3W7DIAyF34XrLvyUUMirTLsw4DbZ2oKCO2mr8u5z9tPd
-        VhtXHMnn2J99FW0EMYgTNMJZbMRlPrIciWobpIQ6dYeJxkvsUjnJGWtpkkYs
-        eZJpyg+EjSQXSJoRm7ylrFIMj1dxKpk/QivlrOV4equrjscSWX31TsZkH2y/
-        h+TAJrQRtfdKmZyyCq53MfveB8+GCjSyPQNBhfQCB+yeWzmvUdM7Bxu72/6Z
-        YR2qybunWTY3PGUVv1+8T/wfvOxscMGh2ivrlLY6oAt663fok0/Rg9G+N3o1
-        fOO9Ft4ry3/d4u62y9PyAYF8CAAGAgAA
+      encoding: UTF-8
+      string: '{"sha":"master","url":"https://api.github.com/repos/theodi/cid-test/git/trees/master","tree":[{"mode":"100644","type":"blob","sha":"c22d8945fac6a4ce4be188002dcd09656bd85898","path":"datapackage.json","size":2473,"url":"https://api.github.com/repos/theodi/cid-test/git/blobs/c22d8945fac6a4ce4be188002dcd09656bd85898"},{"mode":"040000","type":"tree","sha":"d649696e0f04601419e691387e8c8cb8a218521e","path":"votes","url":"https://api.github.com/repos/theodi/cid-test/git/trees/d649696e0f04601419e691387e8c8cb8a218521e"}]}'
     http_version: 
-  recorded_at: Thu, 22 May 2014 13:10:37 GMT
+  recorded_at: Thu, 22 May 2014 14:10:46 GMT
 recorded_with: VCR 2.4.0

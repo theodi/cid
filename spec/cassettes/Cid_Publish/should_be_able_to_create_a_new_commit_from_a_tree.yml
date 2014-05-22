@@ -20,122 +20,66 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        R2l0SHViLmNvbQ==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VGh1LCAyMiBNYXkgMjAxNCAxMzoxMzozNiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "WC1SYXRlbGltaXQtTGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "WC1SYXRlbGltaXQtUmVtYWluaW5n":
-      - !binary |-
-        NDkxMw==
-      !binary "WC1SYXRlbGltaXQtUmVzZXQ=":
-      - !binary |-
-        MTQwMDc2NTM5NQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT02MCwgcy1tYXhhZ2U9NjA=
-      !binary "TGFzdC1Nb2RpZmllZA==":
-      - !binary |-
-        VGh1LCAyMiBNYXkgMjAxNCAxMzowNjozNSBHTVQ=
-      !binary "RXRhZw==":
-      - !binary |-
-        IjJiMDJkMDc0MTI4MTA2MTk1Y2ZlZTA0NmUzMjNjYjA5Ig==
-      !binary "WC1PYXV0aC1TY29wZXM=":
-      - !binary |-
-        Z2lzdCwgcmVwbywgdXNlcg==
-      !binary "WC1BY2NlcHRlZC1PYXV0aC1TY29wZXM=":
-      - !binary |-
-        cmVwbw==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBBdXRob3JpemF0aW9uLCBDb29raWUsIFgtR2l0SHViLU9UUA==
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "WC1HaXRodWItTWVkaWEtVHlwZQ==":
-      - !binary |-
-        Z2l0aHViLnYzOyBmb3JtYXQ9anNvbg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        ZGVueQ==
-      !binary "Q29udGVudC1TZWN1cml0eS1Qb2xpY3k=":
-      - !binary |-
-        ZGVmYXVsdC1zcmMgJ25vbmUn
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctQ3JlZGVudGlhbHM=":
-      - !binary |-
-        dHJ1ZQ==
-      !binary "QWNjZXNzLUNvbnRyb2wtRXhwb3NlLUhlYWRlcnM=":
-      - !binary |-
-        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
-        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
-        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
-        SW50ZXJ2YWw=
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2lu":
-      - !binary |-
-        Kg==
-      !binary "WC1HaXRodWItUmVxdWVzdC1JZA==":
-      - !binary |-
-        NEY0QzU5QjM6MEZFOTo0MjFFRDNEOjUzN0RGODAw
-      !binary "U3RyaWN0LVRyYW5zcG9ydC1TZWN1cml0eQ==":
-      - !binary |-
-        bWF4LWFnZT0zMTUzNjAwMA==
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1TZXJ2ZWQtQnk=":
-      - !binary |-
-        MzA2MTk3NWUxZjM3MTIxYjM3NTE2MDRhZDE1M2M2ODc=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 22 May 2014 14:10:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4989'
+      X-Ratelimit-Reset:
+      - '1400771341'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Thu, 22 May 2014 14:09:56 GMT
+      Etag:
+      - '"47f7c7c0132d67ee74b4feb0e63dedba"'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - repo
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Github-Request-Id:
+      - 4F4C59B3:3035:69C496:537E0542
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - 3061975e1f37121b3751604ad153c687
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA+1Yy3LrKBD9lZS24xg/kutcbe7MF8xmVrNxIQlbVCShAmRX
-        osq/z2nQyx47jrnbbBIJ9zkcNd3QTRvJLIpXi8Xz5udmPYsqXooojlKZPVph
-        bDSLdk1RbLthmwuVSTb5VR0roaO4jQq1lxWQ3gQ4x/v0c7XZLGYRP3DL9bbR
-        BUxya2sTM+YHzXwvbd4kjRE6VZUVlZ2nqmQN69C/QLbXHQOxRosNT57Xm816
-        lXCxSJP18seGr5PsZfe02r28PANwNlMtu1k8NaYybFCa27I4k+YlOePBbKeK
-        Qh2BPP+M6+RswJAjHV5W+7vxwLRMQQg8COkf5BBp7D1CnH3L6N9WZsRgsCBa
-        ZHeI6RCQQov+0TItauWomsSkWtZWquoeUSc48Ci955V85/fyAGcAJzn3TO/s
-        gRMHxNw9QA9oWa3lgadv5AItUiEPcOfdZGdIcNm3mnLw74k3yMnSii3PSsqy
-        HS+M+JhFToCFsRuYIbNuR/I0ezMxrBsm/OuBUv6B3PKwU/qB8hRp+r9cIAYI
-        gsnrMPOn+eYc3SXSdHpiuOH3i1CkFYCQ8CregvCEaxn+drmQIjV5ojS36lZ6
-        XxZ0QtCy6StFhxW8DBLqgCDIlQrzlAOCQBrTiC8F5+UPdHjD+sivmjLxG9FX
-        4v0ypUdCGzdG7ishgjw0gFvW742J5lWah9H12Jb5J7d6fB8kjXCAJ4VKgvBI
-        PObALTM597u+3YaqITbCnpBpsQuWRtiBzOrA9XOyCDxQ4ZixWMogXT2WtZ3H
-        Cl7tG74PYxvAWEU6/Pb8/ebxfznWRzSoqMrRMmnCN5sRT8r86Yt8DHPZCB/J
-        3FH+eWlw5UMnpYD71LKUt87Wy0wd9CRcf4OO4uyckt5vH/3X5RG2ZeNe6DfZ
-        jjXEe90u2+ti7cjdlcZBS9xjWftHzW1OOwmmqLkWISI7KGsTjiJkPp+3ueCu
-        pCyFDsw0jwQF12mOOipEV9tjUR2U3Lr6dEeyMtSrheJZkO8GMIj88oRo88hp
-        rNRoq4IEOeCUqZQFyjZVhe1xI3rKWSkrdzL9SiV+OT1OCNpfRlapmPGimCHq
-        rEwl4hBdDa0OCi8R5gmPhGz0rL4GLwRCMsirWnhsy3x3lGqBwjrbcovCeLVY
-        Pj0unh9Xq3+Wy3ixipcv/0J5U2eXbdbx4ke8fiabujH5JRpv8kQm2Jm6kMLT
-        tXrbdePUwwJgTD4C/hzL8/isPe/M0wKxcRa0I+i8LO/nOJxv/9chkJSrUtQ4
-        ZqO4QnhSs/KOZzT+k2MzVU0Fb2LwyC3qMxxX41B/1PYEOTdbnzRRbHVDvQ1G
-        xmScDB7lq+yNfEcx0pZSa9XdO3hlqhZVxzyZ3jcUpG3y+4lW95KJHW8Ku/W1
-        ISKj5Mbi/gPrLHQJvdQA023ItE/zQdArpPT1z+jfpg3v9yXKJMKolB86xu9L
-        FP7JFdP3JQpuJH/nEqUS9oj7hMluMK2ou71kufr4D8lyICQrFQAA
+      encoding: UTF-8
+      string: '{"id":20057973,"name":"cid-test","full_name":"theodi/cid-test","owner":{"login":"theodi","id":2492770,"avatar_url":"https://avatars.githubusercontent.com/u/2492770?","gravatar_id":"07ab537732bae0cb3167a3bd8f42f885","url":"https://api.github.com/users/theodi","html_url":"https://github.com/theodi","followers_url":"https://api.github.com/users/theodi/followers","following_url":"https://api.github.com/users/theodi/following{/other_user}","gists_url":"https://api.github.com/users/theodi/gists{/gist_id}","starred_url":"https://api.github.com/users/theodi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/theodi/subscriptions","organizations_url":"https://api.github.com/users/theodi/orgs","repos_url":"https://api.github.com/users/theodi/repos","events_url":"https://api.github.com/users/theodi/events{/privacy}","received_events_url":"https://api.github.com/users/theodi/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/theodi/cid-test","description":"A
+        test repo for http://github.com/theodi/cid","fork":false,"url":"https://api.github.com/repos/theodi/cid-test","forks_url":"https://api.github.com/repos/theodi/cid-test/forks","keys_url":"https://api.github.com/repos/theodi/cid-test/keys{/key_id}","collaborators_url":"https://api.github.com/repos/theodi/cid-test/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/theodi/cid-test/teams","hooks_url":"https://api.github.com/repos/theodi/cid-test/hooks","issue_events_url":"https://api.github.com/repos/theodi/cid-test/issues/events{/number}","events_url":"https://api.github.com/repos/theodi/cid-test/events","assignees_url":"https://api.github.com/repos/theodi/cid-test/assignees{/user}","branches_url":"https://api.github.com/repos/theodi/cid-test/branches{/branch}","tags_url":"https://api.github.com/repos/theodi/cid-test/tags","blobs_url":"https://api.github.com/repos/theodi/cid-test/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/theodi/cid-test/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/theodi/cid-test/git/refs{/sha}","trees_url":"https://api.github.com/repos/theodi/cid-test/git/trees{/sha}","statuses_url":"https://api.github.com/repos/theodi/cid-test/statuses/{sha}","languages_url":"https://api.github.com/repos/theodi/cid-test/languages","stargazers_url":"https://api.github.com/repos/theodi/cid-test/stargazers","contributors_url":"https://api.github.com/repos/theodi/cid-test/contributors","subscribers_url":"https://api.github.com/repos/theodi/cid-test/subscribers","subscription_url":"https://api.github.com/repos/theodi/cid-test/subscription","commits_url":"https://api.github.com/repos/theodi/cid-test/commits{/sha}","git_commits_url":"https://api.github.com/repos/theodi/cid-test/git/commits{/sha}","comments_url":"https://api.github.com/repos/theodi/cid-test/comments{/number}","issue_comment_url":"https://api.github.com/repos/theodi/cid-test/issues/comments/{number}","contents_url":"https://api.github.com/repos/theodi/cid-test/contents/{+path}","compare_url":"https://api.github.com/repos/theodi/cid-test/compare/{base}...{head}","merges_url":"https://api.github.com/repos/theodi/cid-test/merges","archive_url":"https://api.github.com/repos/theodi/cid-test/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/theodi/cid-test/downloads","issues_url":"https://api.github.com/repos/theodi/cid-test/issues{/number}","pulls_url":"https://api.github.com/repos/theodi/cid-test/pulls{/number}","milestones_url":"https://api.github.com/repos/theodi/cid-test/milestones{/number}","notifications_url":"https://api.github.com/repos/theodi/cid-test/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/theodi/cid-test/labels{/name}","releases_url":"https://api.github.com/repos/theodi/cid-test/releases{/id}","created_at":"2014-05-22T11:02:18Z","updated_at":"2014-05-22T14:09:56Z","pushed_at":"2014-05-22T14:09:56Z","git_url":"git://github.com/theodi/cid-test.git","ssh_url":"git@github.com:theodi/cid-test.git","clone_url":"https://github.com/theodi/cid-test.git","svn_url":"https://github.com/theodi/cid-test","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_downloads":true,"has_wiki":true,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","permissions":{"admin":false,"push":true,"pull":true},"organization":{"login":"theodi","id":2492770,"avatar_url":"https://avatars.githubusercontent.com/u/2492770?","gravatar_id":"07ab537732bae0cb3167a3bd8f42f885","url":"https://api.github.com/users/theodi","html_url":"https://github.com/theodi","followers_url":"https://api.github.com/users/theodi/followers","following_url":"https://api.github.com/users/theodi/following{/other_user}","gists_url":"https://api.github.com/users/theodi/gists{/gist_id}","starred_url":"https://api.github.com/users/theodi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/theodi/subscriptions","organizations_url":"https://api.github.com/users/theodi/orgs","repos_url":"https://api.github.com/users/theodi/repos","events_url":"https://api.github.com/users/theodi/events{/privacy}","received_events_url":"https://api.github.com/users/theodi/received_events","type":"Organization","site_admin":false},"network_count":0,"subscribers_count":12}'
     http_version: 
-  recorded_at: Thu, 22 May 2014 13:13:41 GMT
+  recorded_at: Thu, 22 May 2014 14:10:15 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/theodi/cid-test/branches/master?access_token=<GITHUB_OAUTH_TOKEN>
@@ -156,115 +100,72 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        R2l0SHViLmNvbQ==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VGh1LCAyMiBNYXkgMjAxNCAxMzoxMzozNyBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "WC1SYXRlbGltaXQtTGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "WC1SYXRlbGltaXQtUmVtYWluaW5n":
-      - !binary |-
-        NDkxMg==
-      !binary "WC1SYXRlbGltaXQtUmVzZXQ=":
-      - !binary |-
-        MTQwMDc2NTM5NQ==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT02MCwgcy1tYXhhZ2U9NjA=
-      !binary "RXRhZw==":
-      - !binary |-
-        ImMxZjA1ZjAyNTMxNDczYWYwYjdlNTIzZWM2YzYzNmIwIg==
-      !binary "WC1PYXV0aC1TY29wZXM=":
-      - !binary |-
-        Z2lzdCwgcmVwbywgdXNlcg==
-      !binary "WC1BY2NlcHRlZC1PYXV0aC1TY29wZXM=":
-      - !binary ""
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBBdXRob3JpemF0aW9uLCBDb29raWUsIFgtR2l0SHViLU9UUA==
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "WC1HaXRodWItTWVkaWEtVHlwZQ==":
-      - !binary |-
-        Z2l0aHViLnYzOyBmb3JtYXQ9anNvbg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        ZGVueQ==
-      !binary "Q29udGVudC1TZWN1cml0eS1Qb2xpY3k=":
-      - !binary |-
-        ZGVmYXVsdC1zcmMgJ25vbmUn
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctQ3JlZGVudGlhbHM=":
-      - !binary |-
-        dHJ1ZQ==
-      !binary "QWNjZXNzLUNvbnRyb2wtRXhwb3NlLUhlYWRlcnM=":
-      - !binary |-
-        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
-        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
-        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
-        SW50ZXJ2YWw=
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2lu":
-      - !binary |-
-        Kg==
-      !binary "WC1HaXRodWItUmVxdWVzdC1JZA==":
-      - !binary |-
-        NEY0QzU5QjM6MEZFOTo0MjFFREY3OjUzN0RGODAx
-      !binary "U3RyaWN0LVRyYW5zcG9ydC1TZWN1cml0eQ==":
-      - !binary |-
-        bWF4LWFnZT0zMTUzNjAwMA==
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1TZXJ2ZWQtQnk=":
-      - !binary |-
-        NjJhMTMwM2FlOTU5MzFlNTZlMzg3ZTg3ZDM1NGJiMjQ=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 22 May 2014 14:10:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4988'
+      X-Ratelimit-Reset:
+      - '1400771341'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - '"415926a4f7e38db12005354bd3cf4b39"'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Github-Request-Id:
+      - 4F4C59B3:3038:28BEF51:537E0542
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - 88d924ed861736d2749ce1a55766cb53
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA+1XPW/bMBT8K4Hm2tS3TC/t0KVTgaJdWhQGRT5ZTCRSICkH
-        qeH/3kdZTmIVSCMN7ZLFMGTevePpHfl8DBRrIdgGLbMOTPAu4LptpQu2x8DW
-        DH9IN1XBs7AsSiGyWHCWVDSNMuBhEaespLChbEN5dgVlvau18SQj/eePn26+
-        6FI7XAYtkw0yayFXt6DupLIfegvGrpU20DUP6710dV+uUQouF8x5gXEYpasw
-        W8Xx1yjZhvk2Sb8Hp4ter/1fVGvBWrb3er51Xpi4wU/WMX6HT9e3VitU7Azg
-        iouBFU2KOAK+iRKaFSIRVR5TIXi+KRNIOD4tRBgLQGBvvC+1c53dEsI6+cwJ
-        gtZoS1wN6BvhUqwcWEfQKuLrWfLqOmjawkLn3rBkZk+Acjuue4VdFS4rvqBw
-        7dpmd73Pp7b6w8ZzgQUbs5Mar3ppc7dDPABdtNgjT9Fq9F6qMUdmzJYUAQYj
-        oZs8xKUH7E0zFTg8tGNn+dxxrRyS+7iRnozo91hqb0YGzxqUNGcFTWmRCjwL
-        ilxEeQQlZElSxYyK8G/9O0Sc+NBfxL78ip6vrHTT6HvETzdzHZFJCfIIQ23n
-        71Ltl1Ag7Eg0Zg/dxG2cvDnSuplyBsgRI2vdTgpPYvFVGBDzJI0gFHSvUMtx
-        OBkGtr603MjOSa1mSruCIpU2e6bkL7aACqG+T4fjat7GBghC4eB7fR72jDmS
-        zsgD4w/eDgMc5AHdXcI3ASOde+iGcx/fv/daOtgx0foEVqyxML2K3tI5vcDe
-        0vmWzv+Yzo6Z4Qrd/rhMZixmcQpZziGhHGhV5jSieZGXLMWLLmWCRzkvI45x
-        XzAwXS75GVVevhCno984s7ya//QTz6hdI9UdmoAeQFPNnTZLwxSvcdh8/Lvg
-        JT9jeWHE8lPqBXc6/QYeT8O3eQwAAA==
+      encoding: UTF-8
+      string: '{"name":"master","commit":{"sha":"357b6cbb632a533bf20657975b6100a0b837b15c","commit":{"author":{"name":"ODI
+        Robot","email":"odi-jenkins@users.noreply.github.com","date":"2014-05-22T14:09:55Z"},"committer":{"name":"ODI
+        Robot","email":"odi-jenkins@users.noreply.github.com","date":"2014-05-22T14:09:55Z"},"message":"Updated
+        datapackage.json","tree":{"sha":"f93721ec813957d3df629ddc68b3e3c1397d02de","url":"https://api.github.com/repos/theodi/cid-test/git/trees/f93721ec813957d3df629ddc68b3e3c1397d02de"},"url":"https://api.github.com/repos/theodi/cid-test/git/commits/357b6cbb632a533bf20657975b6100a0b837b15c","comment_count":0},"url":"https://api.github.com/repos/theodi/cid-test/commits/357b6cbb632a533bf20657975b6100a0b837b15c","html_url":"https://github.com/theodi/cid-test/commit/357b6cbb632a533bf20657975b6100a0b837b15c","comments_url":"https://api.github.com/repos/theodi/cid-test/commits/357b6cbb632a533bf20657975b6100a0b837b15c/comments","author":{"login":"odi-robot","id":3439860,"avatar_url":"https://avatars.githubusercontent.com/u/3439860?","gravatar_id":"b96a794974d7bd76d161ebe533f2a9d0","url":"https://api.github.com/users/odi-robot","html_url":"https://github.com/odi-robot","followers_url":"https://api.github.com/users/odi-robot/followers","following_url":"https://api.github.com/users/odi-robot/following{/other_user}","gists_url":"https://api.github.com/users/odi-robot/gists{/gist_id}","starred_url":"https://api.github.com/users/odi-robot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/odi-robot/subscriptions","organizations_url":"https://api.github.com/users/odi-robot/orgs","repos_url":"https://api.github.com/users/odi-robot/repos","events_url":"https://api.github.com/users/odi-robot/events{/privacy}","received_events_url":"https://api.github.com/users/odi-robot/received_events","type":"User","site_admin":false},"committer":{"login":"odi-robot","id":3439860,"avatar_url":"https://avatars.githubusercontent.com/u/3439860?","gravatar_id":"b96a794974d7bd76d161ebe533f2a9d0","url":"https://api.github.com/users/odi-robot","html_url":"https://github.com/odi-robot","followers_url":"https://api.github.com/users/odi-robot/followers","following_url":"https://api.github.com/users/odi-robot/following{/other_user}","gists_url":"https://api.github.com/users/odi-robot/gists{/gist_id}","starred_url":"https://api.github.com/users/odi-robot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/odi-robot/subscriptions","organizations_url":"https://api.github.com/users/odi-robot/orgs","repos_url":"https://api.github.com/users/odi-robot/repos","events_url":"https://api.github.com/users/odi-robot/events{/privacy}","received_events_url":"https://api.github.com/users/odi-robot/received_events","type":"User","site_admin":false},"parents":[{"sha":"e55df79f1a47c2175e0857ffeff1e2f84ad76071","url":"https://api.github.com/repos/theodi/cid-test/commits/e55df79f1a47c2175e0857ffeff1e2f84ad76071","html_url":"https://github.com/theodi/cid-test/commit/e55df79f1a47c2175e0857ffeff1e2f84ad76071"}]},"_links":{"self":"https://api.github.com/repos/theodi/cid-test/branches/master","html":"https://github.com/theodi/cid-test/tree/master"}}'
     http_version: 
-  recorded_at: Thu, 22 May 2014 13:13:41 GMT
+  recorded_at: Thu, 22 May 2014 14:10:16 GMT
 - request:
     method: post
     uri: https://api.github.com/repos/theodi/cid-test/git/commits?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: UTF-8
-      string: ! '{"message":"Updated datapackage.json","parents":["48f7c50b7bdd52dca3f9415ec0724ab9e89a89c5"],"tree":"f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c"}'
+      string: '{"message":"Updated datapackage.json","parents":["357b6cbb632a533bf20657975b6100a0b837b15c"],"tree":"f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c"}'
     headers:
       Accept:
       - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
@@ -276,6 +177,8 @@ http_interactions:
       - application/json
       Authorization:
       - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 201
@@ -284,7 +187,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Thu, 22 May 2014 13:13:38 GMT
+      - Thu, 22 May 2014 14:10:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -292,19 +195,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4911'
+      - '4987'
       X-Ratelimit-Reset:
-      - '1400765395'
+      - '1400771341'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - ! '"ada7d9266932ea67de4ab3c29b660aa3"'
+      - '"2cfe15e7b092e693863b373783b39bee"'
       X-Oauth-Scopes:
       - gist, repo, user
       X-Accepted-Oauth-Scopes:
       - ''
       Location:
-      - https://api.github.com/repos/theodi/cid-test/git/commits/542a0dfd0589ae6375bed5910b0e21efbb0b4d03
+      - https://api.github.com/repos/theodi/cid-test/git/commits/a2dcc1d78ea67007f87b19f07e01dddb8c73bef6
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       X-Github-Media-Type:
@@ -323,19 +226,19 @@ http_interactions:
       - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
         X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       X-Github-Request-Id:
-      - 4F4C59B3:0FE5:F7449B:537DF801
+      - 4F4C59B3:3034:286486:537E0543
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
       - nosniff
     body:
-      encoding: US-ASCII
-      string: ! '{"sha":"542a0dfd0589ae6375bed5910b0e21efbb0b4d03","url":"https://api.github.com/repos/theodi/cid-test/git/commits/542a0dfd0589ae6375bed5910b0e21efbb0b4d03","html_url":"https://github.com/theodi/cid-test/commit/542a0dfd0589ae6375bed5910b0e21efbb0b4d03","author":{"name":"ODI
-        Robot","email":"odi-jenkins@users.noreply.github.com","date":"2014-05-22T13:13:38Z"},"committer":{"name":"ODI
-        Robot","email":"odi-jenkins@users.noreply.github.com","date":"2014-05-22T13:13:38Z"},"tree":{"sha":"f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c","url":"https://api.github.com/repos/theodi/cid-test/git/trees/f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c"},"message":"Updated
-        datapackage.json","parents":[{"sha":"48f7c50b7bdd52dca3f9415ec0724ab9e89a89c5","url":"https://api.github.com/repos/theodi/cid-test/git/commits/48f7c50b7bdd52dca3f9415ec0724ab9e89a89c5","html_url":"https://github.com/theodi/cid-test/commit/48f7c50b7bdd52dca3f9415ec0724ab9e89a89c5"}]}'
+      encoding: UTF-8
+      string: '{"sha":"a2dcc1d78ea67007f87b19f07e01dddb8c73bef6","url":"https://api.github.com/repos/theodi/cid-test/git/commits/a2dcc1d78ea67007f87b19f07e01dddb8c73bef6","html_url":"https://github.com/theodi/cid-test/commit/a2dcc1d78ea67007f87b19f07e01dddb8c73bef6","author":{"name":"ODI
+        Robot","email":"odi-jenkins@users.noreply.github.com","date":"2014-05-22T14:10:12Z"},"committer":{"name":"ODI
+        Robot","email":"odi-jenkins@users.noreply.github.com","date":"2014-05-22T14:10:12Z"},"tree":{"sha":"f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c","url":"https://api.github.com/repos/theodi/cid-test/git/trees/f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c"},"message":"Updated
+        datapackage.json","parents":[{"sha":"357b6cbb632a533bf20657975b6100a0b837b15c","url":"https://api.github.com/repos/theodi/cid-test/git/commits/357b6cbb632a533bf20657975b6100a0b837b15c","html_url":"https://github.com/theodi/cid-test/commit/357b6cbb632a533bf20657975b6100a0b837b15c"}]}'
     http_version: 
-  recorded_at: Thu, 22 May 2014 13:13:42 GMT
+  recorded_at: Thu, 22 May 2014 14:10:17 GMT
 recorded_with: VCR 2.4.0

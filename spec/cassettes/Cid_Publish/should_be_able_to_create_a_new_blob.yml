@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.github.com/repos/theodi/cid-test/git/blobs?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: UTF-8
-      string: ! '{"content":"new blob content","encoding":"utf-8"}'
+      string: '{"content":"new blob content","encoding":"utf-8"}'
     headers:
       Accept:
       - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
@@ -17,6 +17,8 @@ http_interactions:
       - application/json
       Authorization:
       - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 201
@@ -25,7 +27,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Thu, 22 May 2014 13:11:23 GMT
+      - Thu, 22 May 2014 14:09:04 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -33,13 +35,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4917'
+      - '4998'
       X-Ratelimit-Reset:
-      - '1400765395'
+      - '1400771341'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - ! '"3cb71254860221b3fe02e4d6afd3b069"'
+      - '"3cb71254860221b3fe02e4d6afd3b069"'
       X-Oauth-Scopes:
       - gist, repo, user
       X-Accepted-Oauth-Scopes:
@@ -64,16 +66,16 @@ http_interactions:
       - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
         X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       X-Github-Request-Id:
-      - 4F4C59B3:3039:35881B6:537DF77B
+      - 4F4C59B3:0FE8:383DBFF:537E0500
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
       - nosniff
     body:
-      encoding: US-ASCII
-      string: ! '{"sha":"28b552e7359c5c3bbe947749aab70d18e3ea554b","url":"https://api.github.com/repos/theodi/cid-test/git/blobs/28b552e7359c5c3bbe947749aab70d18e3ea554b"}'
+      encoding: UTF-8
+      string: '{"sha":"28b552e7359c5c3bbe947749aab70d18e3ea554b","url":"https://api.github.com/repos/theodi/cid-test/git/blobs/28b552e7359c5c3bbe947749aab70d18e3ea554b"}'
     http_version: 
-  recorded_at: Thu, 22 May 2014 13:11:28 GMT
+  recorded_at: Thu, 22 May 2014 14:09:09 GMT
 recorded_with: VCR 2.4.0
