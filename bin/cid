@@ -59,5 +59,11 @@ elsif ARGV[0] == "publish"
   datapackage = Cid::Datapackage.new(source)
   datapackage.create
   datapackage.write
-
+  if File.exist?("#{source}/.git")
+    datapackage.publish
+    puts "Changes pushed successfully".colorize(:green)
+  else
+    puts "Git repo not found".colorize(:red)
+    exit 1
+  end
 end
