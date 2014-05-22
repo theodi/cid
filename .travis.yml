@@ -3,8 +3,11 @@ rvm:
 notifications:
   irc:
     channels:
-      - "irc.freenode.net#theodi"
+    - irc.freenode.net#theodi
     template:
-      - "%{repository} %{branch} - %{message} %{build_url}"
+    - '%{repository} %{branch} - %{message} %{build_url}'
     on_success: change
     on_failure: always
+env:
+  global:
+    secure: HZhBJjfU3C6ub01Ioong30m3NMAoT5re8XwDg3VQ86L2Z/lz/Zz7FU+cJvLcJJaO7Jj7UmZK0ov0kFxIesIJMV/KsMfmMOlJjTMz0K5g/C/NaTIKlZTY4Mg53oS4fh0ZNogtfkttOfL/JLyNS2buuSEuMtFtC0+DXlqklQ/JT3w=
