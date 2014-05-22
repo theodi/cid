@@ -47,6 +47,11 @@ module Cid
       File.open("#{@path}/datapackage.json", 'w') { |f| f.write(@json) }
     end
 
+    def publish
+      git = Cid::Publish.new(@path, ENV['GITHUB_OAUTH_TOKEN'])
+      git.publish
+    end
+
   end
 
 end
