@@ -6,7 +6,9 @@ Dotenv.load
 describe Cid::Publish, :vcr do
 
   before :each do
-    @remote = Cid::Publish.new(File.join(File.dirname(__FILE__), 'fixtures', 'repo'), ENV['GITHUB_OAUTH_TOKEN'])
+    tmpdir = Dir.mktmpdir
+    Git.clone("git@github.com:theodi/cid-test.git", tmpdir)
+    @remote = Cid::Publish.new(tmpdir, ENV['GITHUB_OAUTH_TOKEN'])
   end
 
   it "should be able to fetch the default branch for a repo" do
@@ -14,7 +16,7 @@ describe Cid::Publish, :vcr do
   end
 
   it "should be able to get latest commit SHA on a branch" do
-    @remote.latest_commit('master').should == '48f7c50b7bdd52dca3f9415ec0724ab9e89a89c5'
+    @remote.latest_commit('master').should == '357b6cbb632a533bf20657975b6100a0b837b15c'
   end
 
   it "should be able to get a blob sha for a file on a branch" do
@@ -33,7 +35,7 @@ describe Cid::Publish, :vcr do
 
   it "should be able to create a new commit from a tree" do
     commit_sha = @remote.commit('f56a5cd26fa6c67ff51fcc4994ad9b1057e5095c')
-    commit_sha.should == '542a0dfd0589ae6375bed5910b0e21efbb0b4d03'
+    commit_sha.should == 'a2dcc1d78ea67007f87b19f07e01dddb8c73bef6'
   end
 
   it "should push to the default branch" do
