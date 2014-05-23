@@ -54,15 +54,15 @@ When you run `cid validate` on the command line, Cid loops through each folder a
 When you run `cid publish` on the command line, Cid (again), loops through each folder and adds each csv to the `datapackage.json`. It then pushes the changes to the GitHub repo. For this to happen sucessfully, you must have a Github API key, which you can specify either as an environment variable like so:
 
 	export GITHUB_OAUTH_TOKEN="YOUR_TOKEN_HERE"
-	
+
 Or as a command line option like so:
 
 	cid publish --github-token=YOUR_TOKEN_HERE
-	
+
 If you just want to skip the GitHub push altogether, just run
 
 	cid publish --skip-github
-	
+
 ## Getting this in Travis
 
 Obviously, Cid is at its most powerful when used in a CI build. To get Cid working in Travis, simply add a `.travis.yml` file to your repo that looks a bit like this:
@@ -73,7 +73,7 @@ Obviously, Cid is at its most powerful when used in a CI build. To get Cid worki
 		- cid validate
 	after_success:
 		- '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && cid publish'
-		
+
 This installs cid, runs the validation, and then (if the branch is master) generates a new `datapackage.json` and pushes it to github.
 
 You'll also need to add your Github token to the `.travis.yml` file. To do this, just run:
@@ -85,6 +85,13 @@ Then just add your repo to Travis, and push your changes.
 
 Now whenever someone makes a pull request on your data, Cid will validate the data against the schema, and you'll get a nice build status telling you if it's good to go!
 
+## Examples
+
+There's only one repo that uses Cid so far (it is a new thing after all), and you can see it here:
+
+https://github.com/theodi/euro-elections
+
+If you decide to start using Cid, and want it listing here, open a PR and add it to this list!
 
 ## Contributing
 
