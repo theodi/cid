@@ -50,3 +50,11 @@ Feature: Publish a datapackage
     When I run `cid publish`
     Then the output should contain "Github authorisation error"
     And the exit status should be 1
+
+  Scenario: Skip GitHub
+    Given I run `cp -r ../../spec/fixtures/multiple_files multiple_files`
+    And I cd to "multiple_files"
+    When I run `cid publish --skip-github`
+    Then the output should contain "Datapackage created"
+    And the output should not contain "Git repo not found"
+    And the exit status should be 0

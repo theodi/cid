@@ -50,6 +50,7 @@ class CidBin < Thor
     > $ cid validate /this/is/a/datapackage
   LONGDESC
   option :github_token
+  option :skip_github, :type => :boolean
   def publish(source = ".")
     check_path(source)
 
@@ -68,6 +69,8 @@ class CidBin < Thor
     datapackage.create
     datapackage.write
     puts "Datapackage created".colorize(:green)
+
+    unless options[:skip_github]
       if File.exist?("#{source}/.git")
         begin
           datapackage.publish(github_token)
