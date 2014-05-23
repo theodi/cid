@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "github_api"
   spec.add_dependency "dotenv"
   spec.add_dependency "memoist"
+  spec.add_dependency "thor"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

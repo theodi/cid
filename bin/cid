@@ -3,67 +3,106 @@ $:.unshift File.join( File.dirname(__FILE__), "..", "lib")
 
 require 'cid'
 require 'colorize'
+require 'thor'
 
-def print_error(index, error, color=:red)
-  location = ""
-  location += error.row.to_s if error.row
-  location += "#{error.row ? "," : ""}#{error.column.to_s}" if error.column
-  if error.row || error.column
-    location = "#{error.row ? "Row" : "Column"}: #{location}"
+class CidBin < Thor
+
+  desc "validate PATH", "validate a package"
+  long_desc <<-LONGDESC
+    `cid validate` will validate a datapackage containing CSVs and schemas.
+
+    It expects CSVs of each type to be in folders, with the schema that
+    relates to them.
+
+    By default, `cid validate` will look in your current folder, but you can
+    also specify which folder to look in:
+
+    > $ cid validate /this/is/a/datapackage
+  LONGDESC
+  def validate(source = ".")
+    check_path(source)
+
+    validation = Cid::Validation.validate(source)
+
+    code = 0
+
+    validation.each do |k,v|
+      puts "#{k} is #{(v[:errors] + v[:warnings]).count == 0 ? "VALID".green : "INVALID".red}"
+
+      v[:errors].each_with_index { |error, i| print_error(i, error) } if v[:errors].length > 0
+      v[:warnings].each_with_index { |error, i| print_error(i, error) } if v[:warnings].length > 0
+
+      code = 1 if (v[:errors] + v[:warnings]).count > 0
+    end
+
+    exit code
+
   end
-  puts "#{index+1}. #{error.type}. #{location}".colorize(color)
-end
 
-if ARGV[0] == "validate"
+  desc "publish", "Publish a package to GitHub"
+  long_desc <<-LONGDESC
+    `cid publish` will create a new datapackage.json file based on the CSVs in
+    the package and push them to Github (unless you specify `--skip-github`)
 
-  if ARGV[1]
-    source = ARGV[1]
-  else
-    source = "."
-  end
+    By default, `cid publish` will look in your current folder, but you can
+    also specify which folder to look in:
 
-  validation = Cid::Validation.validate(source)
+    > $ cid validate /this/is/a/datapackage
+  LONGDESC
+  option :github_token
+  def publish(source = ".")
+    check_path(source)
 
-  code = 0
+    github_token = options[:github_token] || ENV['GITHUB_OAUTH_TOKEN']
 
-  validation.each do |k,v|
+    if github_token.blank? && !options[:skip_github]
+      error <<-ERROR
+        Github token not specified. Either add GITHUB_OAUTH_TOKEN as an
+        environment variable or `cid publish --github_token=TOKEN`
+      ERROR
+      puts error.colorize(:red)
+      exit 1
+    end
 
-    puts "#{k} is #{(v[:errors] + v[:warnings]).count == 0 ? "VALID".green : "INVALID".red}"
-
-    if v[:errors].length > 0
-      v[:errors].each_with_index do |error, i|
-        print_error(i, error)
+    datapackage = Cid::Datapackage.new(source)
+    datapackage.create
+    datapackage.write
+    puts "Datapackage created".colorize(:green)
+      if File.exist?("#{source}/.git")
+        begin
+          datapackage.publish(github_token)
+          puts "Changes pushed successfully".colorize(:green)
+        rescue Github::Error::NotFound
+          puts "Github authorisation error. Are you allowed to push to this repo?".colorize(:red)
+          exit 1
+        end
+      else
+        puts "Git repo not found".colorize(:red)
+        exit 1
       end
     end
 
-    if v[:warnings].length > 0
-      v[:warnings].each_with_index do |error, i|
-        print_error(i, error)
+  end
+
+  private
+
+    def print_error(index, error, color=:red)
+      location = ""
+      location += error.row.to_s if error.row
+      location += "#{error.row ? "," : ""}#{error.column.to_s}" if error.column
+      if error.row || error.column
+        location = "#{error.row ? "Row" : "Column"}: #{location}"
+      end
+      puts "#{index+1}. #{error.type}. #{location}".colorize(color)
+    end
+
+    def check_path(path)
+      if !File.directory?(path)
+        puts "Path doesn't exist!".colorize(:red)
+        exit 1
       end
     end
 
-    code = 1 if (v[:errors] + v[:warnings]).count > 0
-
-  end
-
-  exit code
-
-elsif ARGV[0] == "publish"
-
-  if ARGV[1]
-    source = ARGV[1]
-  else
-    source = "."
-  end
-
-  datapackage = Cid::Datapackage.new(source)
-  datapackage.create
-  datapackage.write
-  if File.exist?("#{source}/.git")
-    datapackage.publish
-    puts "Changes pushed successfully".colorize(:green)
-  else
-    puts "Git repo not found".colorize(:red)
-    exit 1
-  end
 end
+
+CidBin.start(ARGV)

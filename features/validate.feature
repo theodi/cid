@@ -28,3 +28,8 @@ Feature: Validate a datapackage
   Scenario: Specify directory
     When I run `cid validate spec/fixtures/valid`
     Then the output should contain "votes/votes-1.csv is VALID"
+
+  Scenario: Path doesn't exist
+    When I run `cid validate /this/is/fake`
+    Then the output should contain "Path doesn't exist!"
+    And the exit status should be 1
