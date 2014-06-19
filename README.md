@@ -87,9 +87,10 @@ Now whenever someone makes a pull request on your data, Cid will validate the da
 
 ## Examples
 
-There's only one repo that uses Cid so far (it is a new thing after all), and you can see it here:
+There's only two repos that use Cid so far (it is a new thing after all), and you can see it here:
 
-https://github.com/theodi/euro-elections
+* https://github.com/theodi/euro-elections
+* https://github.com/DemocracyClub/ge2015-candidates
 
 If you decide to start using Cid, and want it listing here, open a PR and add it to this list!
 
