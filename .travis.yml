@@ -19,3 +19,4 @@ deploy:
   on:
     tags: true
     repo: theodi/cid
+    all_branches: true
