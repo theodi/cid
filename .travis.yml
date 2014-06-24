@@ -11,3 +11,11 @@ notifications:
 env:
   global:
   - secure: KTQ83GtNJyXwTUzYKbDtX1FzA3hsBSHefOqYsZ2KzOnj1dPZpGoeb4gcjWHXvNHqmR0mToT8U7KNq8AYWwHQLYCKf2+jRayd9UAzezhcs5u0SVfE5gmZLho57TW3AQvHI/uVQi9yg9/N3uDICqBplHJ7EMeMusUBc6ACF8FRmtY=
+deploy:
+  provider: rubygems
+  api_key:
+    secure: eMaF/ItvetCL32WBFqpKxFbOO6uUXDbwIPDFYvwmtIE4q3khk7uiCwMVgw56t/GNyFKdaNkKlsrqcKgM0W3AmzHcA/gWJM0A69g6MtHswWkiiUzv6rPbZIAG99WTthTfs6RuvqXNuY4qaitO6IfrtZq5lXrlFKJgd/G7i7uZuDU=
+  gem: cid
+  on:
+    tags: true
+    repo: theodi/cid

@@ -37,6 +37,19 @@ describe Cid::Validation do
     validation["seats/seats-2.csv"][:warnings].should == []
   end
 
+  it "ignores a folder if `ignore` is set" do
+    Csvlint::Validator.should_receive(:new).exactly(2).times.and_call_original
+
+    validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'multiple_folders'), ['seats'])
+
+    validation["votes/votes-1.csv"][:errors].should == []
+    validation["votes/votes-1.csv"][:warnings].should == []
+    validation["votes/votes-2.csv"][:errors].should == []
+    validation["votes/votes-2.csv"][:warnings].should == []
+    validation["seats/seats-1.csv"].should be_nil
+    validation["seats/seats-2.csv"].should be_nil
+  end
+
   it "returns errors for an invalid csv" do
     validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'invalid'))
 

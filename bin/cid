@@ -19,10 +19,13 @@ class CidBin < Thor
 
     > $ cid validate /this/is/a/datapackage
   LONGDESC
+  option :ignore, :type => :array, :desc => "folder or folders to ignore (relative to the package root)"
   def validate(source = ".")
     check_path(source)
 
-    validation = Cid::Validation.validate(source)
+    ignore = options[:ignore] || []
+
+    validation = Cid::Validation.validate(source, ignore)
 
     code = 0
 

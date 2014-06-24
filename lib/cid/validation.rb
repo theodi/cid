@@ -4,12 +4,14 @@ module Cid
 
   class Validation
 
-    def self.validate(path)
+    def self.validate(path, ignore = [])
       result = {}
 
       paths = Dir.glob("#{path}/**")
 
       paths.each do |path|
+        next if ignore.include?(path.split("/").last)
+
         begin
           schema = Csvlint::Schema.load_from_json_table(File.new(Dir["#{path}/schema.json"][0]))
         rescue
