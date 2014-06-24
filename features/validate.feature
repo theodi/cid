@@ -33,3 +33,11 @@ Feature: Validate a datapackage
     When I run `cid validate /this/is/fake`
     Then the output should contain "Path doesn't exist!"
     And the exit status should be 1
+
+  Scenario: Ignore folders
+    When I cd to "spec/fixtures/multiple_folders"
+    And I run `cid validate --ignore votes`
+    Then the output should contain "seats/seats-1.csv is VALID"
+    And the output should contain "seats/seats-2.csv is VALID"
+    And the output should not contain "votes/votes-1.csv is VALID"
+    And the output should not contain "votes/votes-2.csv is VALID"
