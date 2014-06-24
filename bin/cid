@@ -23,7 +23,9 @@ class CidBin < Thor
   def validate(source = ".")
     check_path(source)
 
-    validation = Cid::Validation.validate(source, options[:ignore])
+    ignore = options[:ignore] || []
+
+    validation = Cid::Validation.validate(source, ignore)
 
     code = 0
 
