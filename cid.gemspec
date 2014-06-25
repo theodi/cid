@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "dotenv"
   spec.add_dependency "memoist"
   spec.add_dependency "thor"
+  spec.add_dependency "travis"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
@@ -37,5 +38,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "spork"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
+  spec.add_development_dependency "aruba-doubles"
 
 end
