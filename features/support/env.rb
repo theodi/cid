@@ -19,7 +19,7 @@ Before('@validate') do
   @dirs = ["#{File.dirname(__FILE__)}/../.."]
 end
 
-After('@publish') do
+After('@publish, @bootstrap') do
   `rm -rf tmp/aruba/`
 end
 

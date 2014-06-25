@@ -7,6 +7,22 @@ require 'thor'
 
 class CidBin < Thor
 
+  desc "bootstrap", "sets up your .travis.yml"
+  long_desc <<-LONGDESC
+    `cid bootstrap` will populate your repo's `.travis.yml` file.
+  LONGDESC
+  option :branch, :type => :string, :desc => "The branch you want to deploy from (default is master)"
+  option :github_token, :type => :string, :desc => "Your Github Oauth Token"
+  def bootstrap
+    branch = options[:branch] || "master"
+    travis = Cid::Bootstrap.new(:branch => branch, :github_token => options[:github_token])
+    travis.perform
+    if travis.no_remote === true
+      puts "Warning: Can't figure out GitHub repo name. Please ensure your directory contains a Github remote".colorize(:red)
+    end
+    puts "Cid sucessfully bootstrapped!".colorize(:green)
+  end
+
   desc "validate PATH", "validate a package"
   long_desc <<-LONGDESC
     `cid validate` will validate a datapackage containing CSVs and schemas.

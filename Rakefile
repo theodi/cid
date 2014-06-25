@@ -11,7 +11,8 @@ require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 Coveralls::RakeTask.new
 Cucumber::Rake::Task.new(:features) do |t|
-  t.cucumber_opts = "features --format pretty"
+  tags = "--tags ~@skip-ci" if ENV['TRAVIS']
+  t.cucumber_opts = "features --format pretty #{tags}"
 end
 
 task :default => [:spec, :features, 'coveralls:push']
