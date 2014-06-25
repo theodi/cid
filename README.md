@@ -65,7 +65,26 @@ If you just want to skip the GitHub push altogether, just run
 
 ## Getting this in Travis
 
-Obviously, Cid is at its most powerful when used in a CI build. To get Cid working in Travis, simply add a `.travis.yml` file to your repo that looks a bit like this:
+Obviously, Cid is at its most powerful when used in a CI build. To get Cid working in Travis, simply run:
+
+  cid bootstrap --github-token=YOUR_TOKEN_HERE
+
+This will create a `.travis.yml` to your repo and add your encrypted Github key.
+
+Then just add your repo to Travis, and push your changes.
+
+Now whenever someone makes a pull request on your data, Cid will validate the
+data against the schema, and you'll get a nice build status telling you if it's good to go!
+
+If the branch is master, it will also generate a new `datapackage.json` and push that to Github.
+
+If you would rather generate the `datapackage.json` on a different branch (for example, `gh-pages`),
+simply add the option `branch` like so:
+
+  cid bootstrap --github-token=YOUR_TOKEN_HERE --branch=gh-pages
+
+You can also do this manually if you prefer - simply add a `.travis.yml` file to your repo
+that looks a bit like this:
 
 	before_script:
 		- gem install cid
@@ -74,16 +93,9 @@ Obviously, Cid is at its most powerful when used in a CI build. To get Cid worki
 	after_success:
 		- '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && cid publish'
 
-This installs cid, runs the validation, and then (if the branch is master) generates a new `datapackage.json` and pushes it to github.
-
 You'll also need to add your Github token to the `.travis.yml` file. To do this, just run:
 
-	gem install travis
 	travis encrypt GITHUB_OAUTH_TOKEN="YOUR_TOKEN_HERE" --add
-
-Then just add your repo to Travis, and push your changes.
-
-Now whenever someone makes a pull request on your data, Cid will validate the data against the schema, and you'll get a nice build status telling you if it's good to go!
 
 ## Examples
 
