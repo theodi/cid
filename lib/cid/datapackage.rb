@@ -5,6 +5,8 @@ module Cid
 
   class Datapackage
 
+    include Cid::Helpers::File
+
     attr_accessor :json
 
     def initialize(path)
@@ -50,6 +52,16 @@ module Cid
     def publish(token = ENV['GITHUB_OAUTH_TOKEN'])
       git = Cid::Publish.new(@path, token)
       git.publish
+    end
+
+    def schema_for_file(file)
+      path = clean_file(file)
+      begin
+        schema = @datapackage["resources"].select { |r| r["path"] == path }.first["schema"]
+        Csvlint::Schema.from_json_table(nil, schema)
+      rescue NoMethodError
+        nil
+      end
     end
 
   end
