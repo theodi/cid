@@ -101,7 +101,7 @@ If you just want to skip the GitHub push altogether, just run
 
 Obviously, Cid is at its most powerful when used in a CI build. To get Cid working in Travis, simply run:
 
-  cid bootstrap --github-token=YOUR_TOKEN_HERE
+  	cid bootstrap --github-token=YOUR_TOKEN_HERE
 
 This will create a `.travis.yml` to your repo and add your encrypted Github key.
 
@@ -115,7 +115,7 @@ If the branch is master, it will also generate a new `datapackage.json` and push
 If you would rather generate the `datapackage.json` on a different branch (for example, `gh-pages`),
 simply add the option `branch` like so:
 
-  cid bootstrap --github-token=YOUR_TOKEN_HERE --branch=gh-pages
+  	cid bootstrap --github-token=YOUR_TOKEN_HERE --branch=gh-pages
 
 You can also do this manually if you prefer - simply add a `.travis.yml` file to your repo
 that looks a bit like this:
