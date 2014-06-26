@@ -17,25 +17,34 @@ module Cid
     end
 
     def create
-      # Clear out all the resources
-      @datapackage["resources"] = []
 
       paths = Dir.glob("#{@path}/*/")
 
       paths.each do |path|
-        schema = JSON.parse(File.new(Dir["#{path}/schema.json"][0]).read)
+
+        if File.file?("#{path}schema.json")
+          schema = JSON.parse(File.new(Dir["#{path}schema.json"][0]).read)
+        else
+          schema = nil
+        end
 
         Dir["#{path}*.csv"].each do |csv|
-          @datapackage["resources"] << {
+          ref = csv.split("/").last(2).join("/")
+
+          schema = schema_for_file(ref, true) rescue nil if schema.nil?
+
+          resource = {
             name: File.basename(csv, ".csv"),
-            path: csv.split("/").last(2).join("/"),
+            path: ref,
             format: "csv",
             mediatype: "text/csv",
-            bytes: File.size(csv),
-            schema: {
-                fields: schema["fields"]
-              }
+            bytes: File.size(csv)
           }
+
+          resource[:schema] = { fields: schema["fields"] } unless schema.nil?
+
+          @datapackage["resources"].reject! { |r| r["path"] == ref }
+          @datapackage["resources"] << resource
         end
       end
 
@@ -52,13 +61,14 @@ module Cid
       git.publish
     end
 
-    def schema_for_file(path)
+    def schema_for_file(path, json = false)
       begin
         schema = @datapackage["resources"].select { |r| r["path"] == path }.first["schema"]
-        Csvlint::Schema.from_json_table(nil, schema)
+        return Csvlint::Schema.from_json_table(nil, schema) if json === false
       rescue NoMethodError
         nil
       end
+      return schema
     end
 
   end
