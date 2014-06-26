@@ -49,6 +49,40 @@ The schema.json file must match the [JSON table schema](http://dataprotocols.org
 
 You can have any number of folders, and each schema must correspond to the files within it.
 
+Alternatively, you can specify your schema in your `datapackage.json` like so:
+
+```JSON
+
+{
+  "name": "my-dataset",
+  # here we list the data files in this dataset
+  "resources": [
+    {
+      "path": "data.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "var1",
+            "type": "string"
+          },
+          {
+            "name": "var2",
+            "type": "integer"
+          },
+          {
+            "name": "var3",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```
+
+For more information, check out the [Tabular data package specification](http://dataprotocols.org/tabular-data-package/)
+
 When you run `cid validate` on the command line, Cid loops through each folder and validates each csv against the schema. It also checks for any common errors like ragged rows and missing characters using [csvlint](https://github.com/theodi/csvlint.rb).
 
 When you run `cid publish` on the command line, Cid (again), loops through each folder and adds each csv to the `datapackage.json`. It then pushes the changes to the GitHub repo. For this to happen sucessfully, you must have a Github API key, which you can specify either as an environment variable like so:
