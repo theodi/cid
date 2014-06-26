@@ -67,4 +67,13 @@ describe Cid::Validation do
     validation["votes/votes-1.csv"][:warnings].should == []
   end
 
+  it "supports schemas within the datapackage.json" do
+    Csvlint::Validator.should_receive(:new).once.and_call_original
+
+    validation = Cid::Validation.validate(File.join(File.dirname(__FILE__), 'fixtures', 'datapackage_valid'))
+
+    validation["votes/votes-1.csv"][:errors].should == []
+    validation["votes/votes-1.csv"][:warnings].should == []
+  end
+
 end

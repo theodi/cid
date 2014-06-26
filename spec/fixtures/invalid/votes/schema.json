@@ -6,40 +6,52 @@
           "name": "Poll Date",
           "type": "date",
           "description": "Date the poll took place",
-          "format": "yyyy-mm-dd"
+          "constraints": {
+            "format": "yyyy-mm-dd"
+          }
       },
       {
           "name": "Area",
           "type": "string",
           "description": "The name of the area which the result is for",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Area Code",
           "type": "number",
           "description": "The Office of National Statistics code for the area",
-          "pattern": "E1500000(0-9)",
-          "required": true
+          "constraints": {
+            "pattern": "(E|N|S|W)(07|15|08)00000[0-9]",
+            "required": true
+          }
       },
       {
           "name": "Area URL",
           "type": "string",
           "description": "",
-          "required": true,
-          "pattern": "http://statistics.data.gov.uk/doc/statistical-geography/E1500000(0-9)"
+          "constraints": {
+            "required": true,
+            "pattern": "http://statistics.data.gov.uk/doc/statistical-geography/(E|N|S|W)(07|15|08)00000[0-9]"
+          }
       },
       {
           "name": "Party",
           "type": "string",
           "description": "",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Party ID",
           "type": "string",
           "description": "",
-          "required": true,
-          "pattern": "PPm? [0-9]+"
+          "constraints": {
+            "required": true,
+            "pattern": "PPm? [0-9]+"
+          }
       },
       {
           "name": "Votes",

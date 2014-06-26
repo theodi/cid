@@ -4,22 +4,25 @@ module Cid
 
   class Validation
 
-    def self.validate(path, ignore = [])
+    def self.validate(root_path, ignore = [])
       result = {}
 
-      paths = Dir.glob("#{path}/**")
+      paths = Dir.glob("#{root_path}/*/")
 
       paths.each do |path|
         next if ignore.include?(path.split("/").last)
 
-        begin
-          schema = Csvlint::Schema.load_from_json_table(File.new(Dir["#{path}/schema.json"][0]))
-        rescue
+        if File.file?("#{path}schema.json")
+          schema = Csvlint::Schema.load_from_json_table(File.new(Dir["#{path}schema.json"][0]))
+        else
           schema = nil
         end
 
-        Dir["#{path}/*.csv"].each do |csv|
+        Dir["#{path}*.csv"].each do |csv|
+          schema = Cid::Datapackage.new(root_path).schema_for_file(csv) if schema.nil?
+
           validator = Csvlint::Validator.new(File.new(csv), nil, schema)
+
           ref = csv.split("/").last(2).join("/")
           result[ref] = {}
 
