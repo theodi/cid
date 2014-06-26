@@ -34,7 +34,7 @@ describe Cid::Datapackage do
     end
 
     it "creates a datapackage.rb with a new file" do
-      datapackage = Cid::Datapackage.new(File.join(File.dirname(__FILE__), 'fixtures', 'multiple_files'))
+      datapackage = Cid::Datapackage.new(File.join(File.dirname(__FILE__), 'fixtures', 'datapackage_multiple_files'))
       datapackage.create
 
       package = JSON.parse(datapackage.json)
@@ -42,6 +42,8 @@ describe Cid::Datapackage do
       package["resources"].count.should == 2
       package["resources"].flat_map(&:to_a).should include(["name", "votes-2"])
       package["resources"].flat_map(&:to_a).should include(["path", "votes/votes-2.csv"])
+
+      package["resources"].select { |r| r["path"] == "votes/votes-2.csv" }[0]["schema"].should_not be_nil
     end
 
   end

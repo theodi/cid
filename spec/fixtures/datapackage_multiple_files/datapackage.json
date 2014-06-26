@@ -1,0 +1,71 @@
+{
+    "name": "euro-elections",
+    "title": "",
+    "homepage": "",
+    "version": "0.1.0",
+    "license": "PDDL-1.0",
+    "resources": [
+        {
+            "name": "votes-1",
+            "path": "votes/votes-1.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "bytes": 1752,
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Poll Date",
+                        "type": "date",
+                        "description": "Date the poll took place",
+                        "format": "yyyy-mm-dd"
+                    },
+                    {
+                        "name": "Area",
+                        "type": "string",
+                        "description": "The name of the area which the result is for",
+                        "required": true
+                    },
+                    {
+                        "name": "Area Code",
+                        "type": "number",
+                        "description": "The Office of National Statistics code for the area",
+                        "pattern": "E1500000(0-9)",
+                        "required": true
+                    },
+                    {
+                        "name": "Area URL",
+                        "type": "string",
+                        "description": "",
+                        "required": true,
+                        "pattern": "http://statistics.data.gov.uk/doc/statistical-geography/E1500000(0-9)"
+                    },
+                    {
+                        "name": "Party",
+                        "type": "string",
+                        "description": "",
+                        "required": true
+                    },
+                    {
+                        "name": "Party ID",
+                        "type": "string",
+                        "description": "",
+                        "required": true,
+                        "pattern": "PPm? [0-9]+"
+                    },
+                    {
+                        "name": "Votes",
+                        "type": "integer",
+                        "description": ""
+                    },
+                    {
+                        "name": "Ballots Rejected",
+                        "type": "integer",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    ],
+    "description": "",
+    "repository": "git://github.com/theodi/euro-elections.git"
+}
