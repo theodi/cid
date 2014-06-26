@@ -6,65 +6,85 @@
           "name": "Poll Date",
           "type": "date",
           "description": "Date the poll took place",
-          "format": "yyyy-mm-dd",
-          "required": true
+          "constraints": {
+            "format": "yyyy-mm-dd",
+            "required": true
+          }
       },
       {
           "name": "Area",
           "type": "string",
           "description": "The name of the area which the result is for",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Area Code",
           "type": "number",
           "description": "The Office of National Statistics code for the area",
-          "required": true,
-          "pattern": "E1500000(0-9)"
+          "constraints": {
+            "required": true,
+            "pattern": "(E|N|S|W)(07|15|08)00000[0-9]"
+          }
       },
       {
           "name": "Area URL",
           "type": "string",
           "description": "",
-          "required": true,
-          "pattern": "http://statistics.data.gov.uk/doc/statistical-geography/E1500000(0-9)"
+          "constraints": {
+            "required": true,
+            "pattern": "http://statistics.data.gov.uk/doc/statistical-geography/(E|N|S|W)(07|15|08)00000[0-9]"
+          }
       },
       {
           "name": "Seat",
           "type": "integer",
           "description": "",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Party",
           "type": "string",
           "description": "",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Party ID",
           "type": "string",
           "description": "",
-          "required": true,
-          "pattern": "PPm? [0-9]+"
+          "constraints": {
+            "required": true,
+            "pattern": "PPm? [0-9]+"
+          }
       },
       {
           "name": "Name",
           "type": "string",
           "description": "Name of the candidate elected to the seat",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Address",
           "type": "string",
           "description": "Address of the candidate elected to the seat",
-          "required": true
+          "constraints": {
+            "required": true
+          }
       },
       {
           "name": "Postcode",
           "type": "string",
           "description": "Postcode of the candidate elected to the seat",
-          "pattern": "(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})"
+          "constraints": {
+            "pattern": "(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})"
+          }
       }
   ]
 }
