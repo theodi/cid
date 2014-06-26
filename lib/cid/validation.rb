@@ -19,11 +19,12 @@ module Cid
         end
 
         Dir["#{path}*.csv"].each do |csv|
-          schema = Cid::Datapackage.new(root_path).schema_for_file(csv) if schema.nil?
+          ref = csv.split("/").last(2).join("/")
+
+          schema = Cid::Datapackage.new(root_path).schema_for_file(ref) if schema.nil?
 
           validator = Csvlint::Validator.new(File.new(csv), nil, schema)
 
-          ref = csv.split("/").last(2).join("/")
           result[ref] = {}
 
           result[ref][:errors] = validator.errors

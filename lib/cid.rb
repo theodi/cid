@@ -9,7 +9,6 @@ module Cid
 end
 
 require "cid/helpers/github"
-require "cid/helpers/file"
 
 require "cid/version"
 require "cid/validation"
