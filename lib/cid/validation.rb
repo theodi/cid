@@ -13,7 +13,7 @@ module Cid
         next if ignore.include?(path.split("/").last)
 
         if File.file?("#{path}schema.json")
-          schema = Csvlint::Schema.load_from_json_table(File.new(Dir["#{path}schema.json"][0]))
+          schema = Csvlint::Schema.load_from_json(File.new(Dir["#{path}schema.json"][0]))
         else
           schema = nil
         end
@@ -23,7 +23,7 @@ module Cid
 
           schema = Cid::Datapackage.new(root_path).schema_for_file(ref) if schema.nil?
 
-          validator = Csvlint::Validator.new(File.new(csv), nil, schema)
+          validator = Csvlint::Validator.new(File.new(csv), {}, schema)
 
           result[ref] = {}
 
